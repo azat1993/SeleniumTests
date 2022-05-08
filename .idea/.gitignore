@@ -3,3 +3,7 @@
 /workspace.xml
 /misc.xml
 /modules.xml
+/vcs.xml
+/jarRepositories.xml
+/compiler.xml
+*/target/*
