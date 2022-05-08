@@ -4,23 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 public class FirstTest {
     private static final String URL = "https://cloud.swivl.com/register/";
-    /*@BeforeTest
-    void setUp(){
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }*/
 
     @Test
     void registrationTest(){
@@ -28,7 +17,6 @@ public class FirstTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
 
         driver.get(URL);
 
@@ -58,19 +46,5 @@ public class FirstTest {
 
         WebElement SignUpButton = driver.findElement(By.id("formSubmit"));
         SignUpButton.click();
-
-
-        //Assert.assertEquals("We do not recognize your email and/or password.", driver.findElement(By.className("form__error")).getText());
-
-
     }
-
-    /*@AfterTest
-    void tearDown(){
-        driver.quit();
-    }*/
-
-
-
-
 }
